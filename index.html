@@ -44,7 +44,7 @@ user-select: none;
 min-height: 100vh;
 display: flex;
 align-items: center;
-padding-top: 6.5rem; /* account for fixed nav */
+padding-top: 6.5rem;
 }
 
 .hero-badge {
@@ -265,7 +265,7 @@ flex-wrap: wrap;
 .achievement::before { content: '▹'; color: #6366f1; font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
 
 /* Certifications */
-.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem; margin-top: 2.5rem; }
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem; }
 .cert-card {
 background: #ffffff;
 border: 1px solid #e2e8f0;
@@ -279,6 +279,64 @@ text-align: center;
 .cert-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
 .cert-title { font-size: 1.05rem; font-weight: 900; color: #0f172a; margin-bottom: 0.25rem; }
 .cert-issuer { color: #64748b; font-weight: 700; font-size: 0.9rem; }
+
+/* Resources Section */
+.resources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto; }
+.resource-card {
+background: #ffffff;
+border: 2px solid #e2e8f0;
+border-radius: 20px;
+padding: 2.5rem;
+transition: all 0.25s;
+box-shadow: 0 6px 22px rgba(15, 23, 42, 0.05);
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.resource-card:hover { 
+transform: translateY(-8px); 
+border-color: #6366f1; 
+box-shadow: 0 18px 48px rgba(99, 102, 241, 0.18); 
+}
+.resource-icon { 
+font-size: 3.5rem; 
+margin-bottom: 1.25rem;
+filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.2));
+}
+.resource-title { 
+font-size: 1.35rem; 
+font-weight: 900; 
+color: #0f172a; 
+margin-bottom: 0.5rem; 
+}
+.resource-description { 
+color: #64748b; 
+font-weight: 600; 
+font-size: 0.95rem; 
+margin-bottom: 1.75rem;
+line-height: 1.6;
+}
+.download-btn {
+padding: 1rem 2rem;
+background: linear-gradient(135deg, #6366f1, #8b5cf6);
+color: #ffffff;
+border-radius: 12px;
+text-decoration: none;
+font-size: 0.95rem;
+font-weight: 800;
+transition: all 0.25s;
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+box-shadow: 0 6px 24px rgba(99, 102, 241, 0.25);
+border: none;
+cursor: pointer;
+}
+.download-btn:hover { 
+transform: translateY(-2px); 
+box-shadow: 0 10px 30px rgba(99, 102, 241, 0.35); 
+}
 
 /* Skills */
 .skills-categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.75rem; }
@@ -337,6 +395,7 @@ h2 { font-size: 2rem; }
 nav { padding: 1rem 0; }
 .nav-links { gap: 1rem; font-size: 0.9rem; }
 .container { padding: 0 1.25rem; }
+.resources-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -351,6 +410,7 @@ nav { padding: 1rem 0; }
 <li><a href="#projects">Projects</a></li>
 <li><a href="#education">Education</a></li>
 <li><a href="#experience">Experience</a></li>
+<li><a href="#resources">Resources</a></li>
 <li><a href="#certifications">Certifications</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#contact">Contact</a></li>
@@ -380,7 +440,7 @@ ML-driven forecasting workflows, and executive-ready dashboards—turning comple
 <div class="container">
 <div class="stats-grid">
 <div class="stat-card">
-          <div class="stat-number">3.84</div>
+<div class="stat-number">3.84</div>
 <div class="stat-label">Undergrad GPA • Summa Cum Laude</div>
 </div>
 <div class="stat-card">
@@ -527,7 +587,7 @@ Statistics for Analytics I & II, Decision Models, Machine Learning I & II, Optim
 <div class="timeline-date">Dec 2023</div>
 </div>
 <p class="timeline-description">
-GPA: 3.84 • Highest Honors (Summa Cum Laude) • Dean’s List
+GPA: 3.84 • Highest Honors (Summa Cum Laude) • Dean's List
 </p>
 </div>
 </div>
@@ -607,6 +667,47 @@ GPA: 3.84 • Highest Honors (Summa Cum Laude) • Dean’s List
 <div class="achievement">Delivered executive-ready dashboards enabling evidence-based HR decisions.</div>
 </div>
 </div>
+</div>
+</div>
+</section>
+
+<!-- RESOURCES -->
+<section id="resources" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.02), rgba(139, 92, 246, 0.02));">
+<div class="container">
+<div class="section-header">
+<div class="section-tag">Downloads</div>
+<h2>Resume & Credentials</h2>
+<p class="section-description">Official documents available for download</p>
+</div>
+
+<div class="resources-grid">
+<div class="resource-card">
+<div class="resource-icon">📄</div>
+<div class="resource-title">Resume (PDF)</div>
+<div class="resource-description">
+Comprehensive resume highlighting technical skills, projects, and experience in data science and business analytics.
+<br><strong>Updated: December 2025</strong>
+</div>
+<a href="mailto:haniaa@gwgmail.gwu.edu?subject=Resume Request&body=Hi Hania, I'd like to request a copy of your resume." class="download-btn">
+Request Resume →
+</a>
+</div>
+
+<div class="resource-card">
+<div class="resource-icon">🎓</div>
+<div class="resource-title">GWU MSBA Diploma</div>
+<div class="resource-description">
+Official Certified Electronic Diploma from George Washington University, verifiable through CeCredential Trust.
+<br><strong>Degree: MSc Business Analytics</strong>
+</div>
+<a href="mailto:haniaa@gwgmail.gwu.edu?subject=Diploma Request&body=Hi Hania, I'd like to request a copy of your GWU diploma." class="download-btn">
+Request Diploma →
+</a>
+</div>
+</div>
+
+<div style="text-align: center; margin-top: 2rem; color: #64748b; font-size: 0.95rem;">
+<p>💡 <strong>Note:</strong> These documents are provided upon request to maintain the most current versions and track distribution.</p>
 </div>
 </div>
 </section>
@@ -756,7 +857,7 @@ GPA: 3.84 • Highest Honors (Summa Cum Laude) • Dean’s List
 <div class="container">
 <div class="section-header">
 <div class="section-tag">Get In Touch</div>
-<h2>Let’s Connect</h2>
+<h2>Let's Connect</h2>
 <p class="section-description">Open to data science / analytics roles, collaborations, and interesting AI + analytics conversations.</p>
 </div>
 
@@ -787,7 +888,3 @@ if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 </script>
 </body>
 </html>
-
-
-
-
